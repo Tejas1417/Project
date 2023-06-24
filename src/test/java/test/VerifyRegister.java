@@ -60,19 +60,14 @@ public class VerifyRegister extends Base {
 		RP.Myaccountclick().click();
 		RP.Registerclick().click();
 
-		//String actualText = RP.Registermsg().getText();
-		String expectedtext = "Register Account";
-		//Common.commonassert(RP.Registermsg().getText(), expectedtext, error);
-
 		RP.Continueclick().click();
 
-		Shutterbug.shootPage(driver, Capture.FULL_SCROLL).save("C:\\Users\\Tejas\\Desktop\\Technogeeks\\SS\\Reg fail");
+	//	Shutterbug.shootPage(driver, Capture.FULL_SCROLL).save("C:\\Users\\Tejas\\Desktop\\Technogeeks\\SS\\Reg fail");
 
 		String Errort = RP.Errorreg().getText();
 		String et = "Warning: You must agree to the Privacy Policy!";		
-		Common.commonassert("Errort", et, error);
-	
-	System.out.println("AAA");
+		Common.commonassert(Errort, et, error);
+
 	}
 
 }

@@ -33,7 +33,7 @@ public class RegisterObjects {
 
 	private By Successreg = By.xpath("//h1[contains(text(),'Your Account Has Been Created!')]");
 	
-	private By errorreg = By.xpath("//*[@id=\"account-register\"]/div[1]");
+	private By errorreg = By.xpath("//div[contains(text(),' Warning: You must agree to the Privacy Policy!')]");
 	
 	private static String Password = Constant.getPass();
 	
